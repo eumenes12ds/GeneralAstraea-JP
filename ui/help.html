@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>SillyTavern プリセットの正規表現・機能紹介</title>
+<meta name="color-scheme" content="light dark" />
+<style>
+  :root{
+    --bg: #0b0c10;
+    --panel: #111218;
+    --text: #e9e9ee;
+    --muted: #a4a6b0;
+    --brand: #7c5cff;
+    --brand-2: #46c2ff;
+    --ok: #2ecc71;
+    --warn: #ffb020;
+    --danger: #ff5b5b;
+    --border: #262733;
+    --code-bg: #0f1016;
+    --shadow: 0 10px 30px rgba(0,0,0,.35);
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --bg: #f7f7fb;
+      --panel: #ffffff;
+      --text: #1a1b22;
+      --muted: #5a5d70;
+      --brand: #6a5cff;
+      --brand-2: #00aaff;
+      --ok: #1f9b5f;
+      --warn: #b78000;
+      --danger: #ce3b3b;
+      --border: #e9e9f0;
+      --code-bg: #f2f3f8;
+      --shadow: 0 10px 24px rgba(0,0,0,.08);
+    }
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+      "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    background: radial-gradient(1200px 600px at 20% 0%, rgba(124,92,255,.10), transparent),
+                radial-gradient(1000px 500px at 80% 0%, rgba(70,194,255,.10), transparent),
+                var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:32px 20px 80px}
+  .hero{
+    display:grid; gap:16px; padding:28px 24px; border:1px solid var(--border);
+    background: linear-gradient(180deg, rgba(124,92,255,.12), rgba(124,92,255,0) 60%) , var(--panel);
+    border-radius:18px; box-shadow: var(--shadow);
+  }
+  .badge{
+    width:max-content; padding:6px 10px; border-radius:999px; font-size:12px; letter-spacing:.4px;
+    background: linear-gradient(90deg, rgba(124,92,255,.25), rgba(70,194,255,.25));
+    color:#fff; border:1px solid rgba(255,255,255,.18);
+    text-transform: uppercase;
+  }
+  h1{font-size:32px; margin:0 0 6px; line-height:1.25}
+  p.lead{margin:0;color:var(--muted);font-size:15px}
+  .grid{
+    display:grid; gap:16px; margin-top:22px;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .col-4{grid-column: span 12}
+  .col-6{grid-column: span 12}
+  @media (min-width: 820px){
+    .col-4{grid-column: span 4}
+    .col-6{grid-column: span 6}
+  }
+  .card{
+    height:100%;
+    padding:18px 16px;
+    background: var(--panel);
+    border:1px solid var(--border);
+    border-radius:14px;
+  }
+  .card h3{margin:0 0 6px;font-size:18px}
+  .muted{color:var(--muted)}
+  .icon{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:28px; height:28px; border-radius:8px; margin-right:8px;
+    background: linear-gradient(180deg, rgba(124,92,255,.22), rgba(124,92,255,.08));
+    border:1px solid rgba(124,92,255,.35);
+  }
+  .kbar{
+    display:flex; gap:10px; flex-wrap:wrap; margin-top:8px
+  }
+  .kbtn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:8px 12px; border-radius:999px; font-size:13px;
+    background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,0));
+    border:1px solid var(--border);
+    cursor:default;
+  }
+  .kbtn .dot{width:8px;height:8px;border-radius:999px;background:var(--ok)}
+  .section{margin-top:28px;
+      display:grid; gap:16px; padding:28px 24px; border:1px solid var(--border);
+    background: linear-gradient(180deg, rgba(124,92,255,.12), rgba(124,92,255,0) 60%) , var(--panel);
+    border-radius:18px; box-shadow: var(--shadow);}
+  .section h2{font-size:22px;margin:0 0 8px}
+  ul.check{padding-left:0;list-style:none;margin:10px 0 0}
+  ul.check li{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
+  ul.check svg{flex:none;margin-top:4px}
+  .code{
+    margin-top:12px; border:1px solid var(--border); border-radius:14px; overflow:auto;
+    background: var(--code-bg); padding:14px;
+    color: var(--muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 13px;
+  }
+  .tip{font-size:13px;color:var(--muted);margin-top:6px}
+  .footer{
+    margin-top:36px; padding-top:16px; border-top:1px dashed var(--border); color:var(--muted); font-size:13px
+  }
+  a{color:var(--brand-2); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .pill{padding:3px 8px;border-radius:999px;border:1px solid var(--border);font-size:12px;background:rgba(255,255,255,.04)}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <span class="badge">SillyTavern · Regex Preset Binder</span>
+      <h1>プリセットの正規表現（Regex Preset Binder）</h1>
+      <p class="lead">正規表現スクリプトをSillyTavernのプリセットに組み込み、標準機能と同じ感覚で管理・切り替えできます。</p>
+
+      <div class="grid">
+        <div class="col-4">
+          <div class="card">
+            <div class="icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M20 7L9 18l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>プリセット内蔵の正規表現</h3>
+            <p class="muted">標準版にはプリセットと正規表現を一緒に読み込む機能がありません。このスクリプトでは関連する正規表現を内蔵し、プリセットの読み込み時に自動で利用できます。</p>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card">
+            <div class="icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M20 7L9 18l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>充実した操作画面</h3>
+            <p class="muted">標準の正規表現画面と同様に、有効化・無効化、編集、読み込み・書き出し、並べ替え、複数選択を行えます。</p>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card">
+            <div class="icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M20 7L9 18l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>ワンクリックで切り替え</h3>
+            <p class="muted">ボタン一つで「共通 ↔ プリセット」間を移動し、スクリプトの紐づけと解除を行えます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>使い始める</h2>
+      <ol class="muted" style="margin:6px 0 0;padding-left:20px">
+        <li>このスクリプトをインストールします（完了済み）</li>
+        <li><b>設定 → Regex</b>を開くと、<b>「プリセットに紐づく正規表現」</b>の領域が追加されています。</li>
+        <li><b>プリセットの正規表現を読み込む</b>または<b>プリセットの正規表現を新規作成</b>から、使用するルールを設定します。</li>
+        <li>「⬆ プリセットに紐づけ／⬇ 共通へ戻す」で両方の領域を切り替えます。</li>
+        <li>ドラッグで並べ替え、保存します。</li>
+      </ol>
+
+      <div class="code" role="region" aria-label="例: プリセットと共通の切り替え">
+<pre><code>// 共通スクリプトに「プリセットに紐づけ」ボタンが表示されます:
+// 押すとextensions.regexから除かれ、プリセット一覧に追加されます（promptsに保存）。
+// 逆方向の「共通へ戻す」も同様です。
+</code></pre>
+      </div>
+      <div class="tip">ヒント: プリセットのデータは、<code>chatCompletionSettings.prompts</code>の識別子<code>regexes-bindings</code>にJSON文字列として保存されます。</div>
+    </div>
+
+    <div class="section">
+      <h2>よくある質問</h2>
+      <div class="card col-6" style="padding:16px">
+        <h3 style="margin:0 0 4px">プリセットの正規表現をドラッグできなくなった場合は？</h3>
+        <p class="muted" style="margin:0">このスクリプトを一度無効にして、再度有効にしてください。</p>
+      </div>
+      <div class="card col-6" style="padding:16px; margin-top:10px">
+        <h3 style="margin:0 0 4px">紐づけた項目を一括削除できますか？</h3>
+        <p class="muted" style="margin:0">SillyTavernの画面側の制約により、一括削除はできません。個別に削除するか、共通へ戻してから一括処理してください。</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>© 2025 Regex Preset Binder · 作者とプレイヤーのための、使いやすい正規表現管理</span>
+    </div>
+  </div>
+</body>
+</html>
