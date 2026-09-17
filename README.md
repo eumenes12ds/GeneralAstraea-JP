@@ -4,7 +4,7 @@ GeneralAstraea 日本語版で使用するスクリプト、画面、フォン�
 
 ## 配布
 
-固定版: [v1.0.1](https://github.com/eumenes12ds/GeneralAstraea-JP/tree/v1.0.1)。各ファイルの固定URLとSHA-256は [manifest.json](manifest.json) に記録しています。
+固定版: [v1.0.2](https://github.com/eumenes12ds/GeneralAstraea-JP/tree/v1.0.2)。各ファイルの固定URLとSHA-256は [manifest.json](manifest.json) に記録しています。
 
 元のプリセットは依存資源をすでに内蔵しています。日本語版も同じ内蔵方式を維持し、このリポジトリからのオンライン読み込みを新たに要求しません。第三者CDNに対する実行時の要求は、検証した編集画面・選択肢・思考要約の再生で0件です。
 
@@ -20,3 +20,7 @@ SillyTavern本体の ./script.js、./scripts/openai.js、/version、jQuery等の
 ## v1.0.1
 
 行動選択肢の初期配色をホストの文字色に合わせ、透明なカードが暗い背景でも読めるよう修正しました。手動で選んだ配色は維持します。入力欄への追記には実際の改行を使用し、直接送信の代替処理は正しい送信ボタンを参照します。元の表示構造と内蔵方式は変えていません。
+
+## v1.0.2
+
+思考要約の本文とステップ行のフォントを、ASTRAEA-JPと同じNoto Serif JPに変更しました。

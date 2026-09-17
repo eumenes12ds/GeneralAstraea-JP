@@ -302,7 +302,7 @@
     padding: 3px 0 !important;
     line-height: 1.34 !important;
     color: var(--qqz-text-dim) !important;
-    font-family: "Noto Serif SC", "Source Han Serif SC", "STSong", "SimSun", serif !important;
+    font-family: "Noto Serif JP", serif !important;
     font-size: 0.68rem !important;
     letter-spacing: 0.02em !important;
     opacity: 0.96 !important;
@@ -482,7 +482,7 @@
     border-top: 1px solid rgba(77, 57, 29, 0.26) !important;
     border-left: 1px solid rgba(93, 68, 35, 0.18) !important;
     color: var(--qqz-text-main) !important;
-    font-family: "Noto Serif SC", "Source Han Serif SC", "STSong", "SimSun", serif !important;
+    font-family: "Noto Serif JP", serif !important;
     font-size: 0.93em !important;
     line-height: 1.92 !important;
     letter-spacing: 0.035em !important;
