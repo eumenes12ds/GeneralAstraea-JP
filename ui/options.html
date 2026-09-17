@@ -270,8 +270,17 @@
             const themeBtn = document.getElementById('theme-toggle-btn');
             const themeIconContainer = document.getElementById('theme-icon-container');
             
-            // Initialize from persisted storage; falls back to "light" when no value is stored
-            let currentTheme = localStorage.getItem('era_options_text_theme') || 'light';
+            // Preserve an explicit choice; otherwise match the host text for transparent cards.
+            function detectHostTextTheme() {
+                try {
+                    const host = window.frameElement?.closest('.mes_text') || window.parent.document.body;
+                    const rgb = window.parent.getComputedStyle(host).color.match(/[\d.]+/g)?.slice(0, 3).map(Number);
+                    if (rgb?.length === 3) return 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2] > 128 ? 'dark' : 'light';
+                } catch {}
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            const savedTheme = localStorage.getItem('era_options_text_theme');
+            let currentTheme = ['light', 'dark'].includes(savedTheme) ? savedTheme : detectHostTextTheme();
 
             function updateThemeUI() {
                 if (currentTheme === 'dark') {
@@ -378,7 +387,7 @@
                     try {
                         const inputArea = window.parent.document.querySelector('#send_textarea');
                         if (inputArea) {
-                            inputArea.value += (inputArea.value.trim().length > 0 ? '\\n' : '') + textToSend;
+                            inputArea.value += (inputArea.value.trim().length > 0 ? '\n' : '') + textToSend;
                             inputArea.dispatchEvent(new Event('input', { bubbles: true }));
                         }
                     } catch (error) {
@@ -393,7 +402,7 @@
                     if (inputArea) {
                         inputArea.value = textToSend;
                         inputArea.dispatchEvent(new Event('input', { bubbles: true}));
-                        const sendBtn = window.parent.document.querySelector('#send_butt');
+                        const sendBtn = window.parent.document.querySelector('#send_but');
                         if(sendBtn) sendBtn.click();
                     }
                 } catch(e) {

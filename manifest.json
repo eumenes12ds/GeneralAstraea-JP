@@ -1,6 +1,6 @@
 {
   "name": "GeneralAstraea-JP",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "owner": "eumenes12ds",
   "runtimeMode": "source-preserved inline assets; repository contains matching mirrors",
   "files": [
@@ -10,7 +10,7 @@
       "sha256": "ca3ba4de4414dc1c9d3e6f377519770806890ae7cf748982b55d5d5350141b36",
       "source": "GeneralAstraea embedded resource, Japanese derivative",
       "license": "Original SPreset attribution retained; no standalone license supplied in the source preset",
-      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.0/runtime/SPreset.js"
+      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.1/runtime/SPreset.js"
     },
     {
       "file": "runtime/SPreset-loader.js",
@@ -18,7 +18,7 @@
       "sha256": "0f861f6cfc6acf970c3b88b1095b1fee5cb1b2f1eab1234838ba2759c990d82f",
       "source": "GeneralAstraea embedded resource, Japanese derivative",
       "license": "Original SPreset attribution retained",
-      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.0/runtime/SPreset-loader.js"
+      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.1/runtime/SPreset-loader.js"
     },
     {
       "file": "runtime/reasoning.js",
@@ -26,7 +26,7 @@
       "sha256": "0c6291858c5c645f845716c7e0ab88bc64b41421cbded219a5a918005bb307a9",
       "source": "GeneralAstraea embedded resource, Japanese derivative",
       "license": "Original @shiyue137 attribution retained; no standalone license supplied in the source preset",
-      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.0/runtime/reasoning.js"
+      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.1/runtime/reasoning.js"
     },
     {
       "file": "ui/editor.html",
@@ -34,15 +34,15 @@
       "sha256": "a79091f58c5a661bc428b1082845b45fb61ada2887371dd085615554bd7bfffe",
       "source": "GeneralAstraea embedded resource, Japanese derivative",
       "license": "Mixed: original editor and embedded third-party assets; see THIRD_PARTY_NOTICES.md",
-      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.0/ui/editor.html"
+      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.1/ui/editor.html"
     },
     {
       "file": "ui/options.html",
-      "bytes": 20956,
-      "sha256": "3a00d1f23a84dfc415b9a9346b8a22734d5895bbb79bf909f57c543357a7ce7c",
+      "bytes": 21614,
+      "sha256": "151f34520b991d2f585253e62885abc7fbf8c43c18767b1e6fb12da74626f455",
       "source": "GeneralAstraea embedded resource, Japanese derivative",
       "license": "Original bundled options UI; no standalone license supplied",
-      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.0/ui/options.html"
+      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.1/ui/options.html"
     },
     {
       "file": "ui/help.html",
@@ -50,7 +50,7 @@
       "sha256": "f7d9a3e50fa2f2b3436e5491bda8c50504ff7314d89c405f3738356f03b231d2",
       "source": "GeneralAstraea embedded resource, Japanese derivative",
       "license": "Original Regex Preset Binder documentation, Japanese translation",
-      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.0/ui/help.html"
+      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.1/ui/help.html"
     },
     {
       "file": "images/spreset-logo.png",
@@ -58,7 +58,7 @@
       "sha256": "cb66aef67827869ef2946348702382663339e98f8c61eaee859d767c27ca77c8",
       "source": "GeneralAstraea embedded resource, Japanese derivative",
       "license": "Original bundled SPreset icon; attribution retained",
-      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.0/images/spreset-logo.png"
+      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.1/images/spreset-logo.png"
     },
     {
       "file": "fonts/Roboto-3.015.woff2",
@@ -66,7 +66,7 @@
       "sha256": "1404ca348bd75ef836f4dd8b6f2cc719458642d1237c368296b2fc652dca47dc",
       "source": "GeneralAstraea embedded resource, Japanese derivative",
       "license": "SIL Open Font License 1.1",
-      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.0/fonts/Roboto-3.015.woff2"
+      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.1/fonts/Roboto-3.015.woff2"
     },
     {
       "file": "fonts/Material-Symbols-Outlined-2.963.woff2",
@@ -74,7 +74,7 @@
       "sha256": "b23e9227e56bafdfcd301799b33a17c69f675d6b7ece1c49e343d0a470c9a38f",
       "source": "GeneralAstraea embedded resource, Japanese derivative",
       "license": "Apache-2.0",
-      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.0/fonts/Material-Symbols-Outlined-2.963.woff2"
+      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.1/fonts/Material-Symbols-Outlined-2.963.woff2"
     },
     {
       "file": "images/transparent.gif",
@@ -82,7 +82,7 @@
       "sha256": "ef1955ae757c8b966c83248350331bd3a30f658ced11f387f8ebf05ab3368629",
       "source": "GeneralAstraea embedded resource, Japanese derivative",
       "license": "Original bundled 1px transparent placeholder",
-      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.0/images/transparent.gif"
+      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.1/images/transparent.gif"
     },
     {
       "file": "vendor/tailwindcss-3.4.17.js",
@@ -90,7 +90,7 @@
       "sha256": "176e894661aa9cdc9a5cba6c720044cbbf7b8bd80d1c9a142a7c24b1b6c50d15",
       "source": "Exact unmodified JavaScript extracted from the source preset editor",
       "license": "MIT and retained bundled notices",
-      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.0/vendor/tailwindcss-3.4.17.js"
+      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.1/vendor/tailwindcss-3.4.17.js"
     },
     {
       "file": "licenses/tailwindcss-MIT.txt",
@@ -98,7 +98,7 @@
       "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985",
       "source": "https://raw.githubusercontent.com/tailwindlabs/tailwindcss/v3.4.17/LICENSE",
       "license": "Upstream license text",
-      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.0/licenses/tailwindcss-MIT.txt"
+      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.1/licenses/tailwindcss-MIT.txt"
     },
     {
       "file": "licenses/Roboto-OFL.txt",
@@ -106,7 +106,7 @@
       "sha256": "061402327a96aadb0bfb694a960ed289ecd38d383e396243831ab81feb109c41",
       "source": "https://raw.githubusercontent.com/googlefonts/roboto-classic/main/OFL.txt",
       "license": "Upstream license text",
-      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.0/licenses/Roboto-OFL.txt"
+      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.1/licenses/Roboto-OFL.txt"
     },
     {
       "file": "licenses/Material-Symbols-Apache-2.0.txt",
@@ -114,7 +114,7 @@
       "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
       "source": "https://raw.githubusercontent.com/google/material-design-icons/master/LICENSE",
       "license": "Upstream license text",
-      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.0/licenses/Material-Symbols-Apache-2.0.txt"
+      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.1/licenses/Material-Symbols-Apache-2.0.txt"
     },
     {
       "file": "licenses/PostCSS-MIT.txt",
@@ -122,7 +122,7 @@
       "sha256": "c4630ac8b89cb317ac5bdd60ac5e4e185eab9bd5151a0c7b3afa41aa83d7ec9b",
       "source": "https://raw.githubusercontent.com/postcss/postcss/8.4.49/LICENSE",
       "license": "Upstream license text",
-      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.0/licenses/PostCSS-MIT.txt"
+      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.1/licenses/PostCSS-MIT.txt"
     },
     {
       "file": "licenses/cssesc-MIT.txt",
@@ -130,7 +130,7 @@
       "sha256": "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a",
       "source": "https://raw.githubusercontent.com/mathiasbynens/cssesc/v3.0.0/LICENSE-MIT.txt",
       "license": "Upstream license text",
-      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.0/licenses/cssesc-MIT.txt"
+      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.1/licenses/cssesc-MIT.txt"
     },
     {
       "file": "licenses/fill-range-MIT.txt",
@@ -138,7 +138,7 @@
       "sha256": "35bdd8a44339719441900fb50fbefc5e2dca1ca662cbaed7a687de842c8b70f2",
       "source": "https://raw.githubusercontent.com/jonschlinkert/fill-range/7.1.1/LICENSE",
       "license": "Upstream license text",
-      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.0/licenses/fill-range-MIT.txt"
+      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.1/licenses/fill-range-MIT.txt"
     },
     {
       "file": "licenses/is-number-MIT.txt",
@@ -146,7 +146,7 @@
       "sha256": "35bdd8a44339719441900fb50fbefc5e2dca1ca662cbaed7a687de842c8b70f2",
       "source": "https://raw.githubusercontent.com/jonschlinkert/is-number/7.0.0/LICENSE",
       "license": "Upstream license text",
-      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.0/licenses/is-number-MIT.txt"
+      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.1/licenses/is-number-MIT.txt"
     },
     {
       "file": "licenses/to-regex-range-MIT.txt",
@@ -154,7 +154,7 @@
       "sha256": "e7d1fee7347ffddccc5fd03327ffdb50f8c112be0d5016d62388a92c4ae6e7a9",
       "source": "https://raw.githubusercontent.com/micromatch/to-regex-range/5.0.1/LICENSE",
       "license": "Upstream license text",
-      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.0/licenses/to-regex-range-MIT.txt"
+      "releaseUrl": "https://raw.githubusercontent.com/eumenes12ds/GeneralAstraea-JP/v1.0.1/licenses/to-regex-range-MIT.txt"
     }
   ]
 }
